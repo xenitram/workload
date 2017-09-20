@@ -9553,20 +9553,18 @@
   if (typeof define === "function" && define.amd) this.d3 = d3, define(d3); else if (typeof module === "object" && module.exports) module.exports = d3; else this.d3 = d3;
 }();
 
+//_Z1KBwXr
 
+var _Z1QQFIH= function(xScale) {
 
-//<@workload/lib/d3/v3.5.17/d3@>
-
-var xen_d3_todayline= function(xScale) {
-	
 	var xScale = xScale;
 	var height=80;
 	var lineFormat={marginTop: 25, marginBottom: 0, width: 1, color: 'rgba(0,0,255,0.3)' };
 	
 	var todayline=function(selection){
 		selection.each(function(data){
-		todayLine = xScale(new Date());
-		//var todayLine=xScale(new Date("2017-08-30T17:50:04.000Z"));
+		//todayLine = xScale(new Date());
+		var todayLine=xScale(new Date("2017-08-30T17:50:04.000Z"));
 		
 			var tl=d3.select(this).selectAll('#today').data([data]);
 			
@@ -9599,9 +9597,9 @@ var xen_d3_todayline= function(xScale) {
 	return todayline;
 }
 
-//<@workload/lib/d3/v3.5.17/d3@>
+//_Z1KBwXr
 
-var xen_d3_bgbar= function(yScale) {
+var _xSxue= function(yScale) {
 	var x=0,y=0,width=0,barSpacing=15,barPadding=2;
 	
 	var self=function(selection){
@@ -9669,7 +9667,7 @@ var xen_d3_bgbar= function(yScale) {
 	return self;
 }
 
-//<@workload/lib/d3/v3.5.17/d3@>
+//_Z1KBwXr
 
 var batchdata={}
 
@@ -9694,7 +9692,7 @@ function getBatchData(d){
 		})
 }
 
-var xen_d3_batch= function(yScale) {
+var _xRP7o= function(yScale) {
 	
 	var yScale=yScale;
 	var x=0,y=0,width=0,barSpacing=15,barPadding=2;
@@ -9719,7 +9717,7 @@ var xen_d3_batch= function(yScale) {
 			.append('a')
 				.attr('xlink:href',function(d){return 'http://sxbatch.silex.se/sxBatch/Operator/batch/batchPage.aspx?batchId='+d.meta.id;})//+'-'+d.name
 				.attr('target','_blank')
-				
+
     batchEnter.append("rect")
 		.attr("x", x)
 		.attr("y", x)
@@ -9840,8 +9838,8 @@ var xen_d3_batch= function(yScale) {
 	return self;
 }
 
-//<@workload/lib/d3/v3.5.17/d3@>
-var xen_d3_segment= function(xScale) {
+//_Z1KBwXr
+var _Z2vpPOA= function(xScale) {
 	
 
 	var x=0,y=0,width=0,barSpacing=15,barPadding=2;
@@ -9936,10 +9934,10 @@ var xen_d3_segment= function(xScale) {
 	return self;
 }
 
-//<@workload/lib/d3/v3.5.17/d3@>
-var Segment = xen_d3_segment
+//_Z1KBwXr
+var Segment = _Z2vpPOA
 
-var xen_d3_bar= function(xScale,yScale) {
+var _ZfrXhV= function(xScale,yScale) {
 	
 
 	var x=0,y=0,width=0,barSpacing=15,barPadding=2;
@@ -10062,15 +10060,13 @@ var xen_d3_bar= function(xScale,yScale) {
 	return self;
 }
 
+//_Z1KBwXr
+var Todayline = _Z1QQFIH
+var BackgroundBar = _xSxue
+var Batch = _xRP7o
+var Bar = _ZfrXhV
 
-
-//<@workload/lib/d3/v3.5.17/d3@>
-var Todayline = xen_d3_todayline
-var BackgroundBar = xen_d3_bgbar
-var Batch = xen_d3_batch
-var Bar = xen_d3_bar
-
-var xen_d3_timeline= function() {
+var _ZjbOlg= function() {
 	
 	function timeline(selection){
 
@@ -10095,7 +10091,7 @@ var xen_d3_timeline= function() {
 
 			var length=d3.keys(data).length;
 
-			//console.log(length);
+			console.log(length);
 
 			var width=bounding.width;
 			//var height=bounding.height;
@@ -10239,7 +10235,7 @@ var xen_d3_timeline= function() {
 			svg.attr("transform", "translate(" + d3.event.translate + ")" + " scale(" + d3.event.scale + ")")
 			}))
 		*/
-			
+
 			function zoomed() {
 				var e=d3.event
 				var t = e.translate,
@@ -10265,7 +10261,7 @@ var xen_d3_timeline= function() {
 	return timeline;
 };
 
-var xen_utils_extract= function extract(selection){
+var _Z1uzd1v= function extract(selection){
 	var databybatch={};
 
 	selection.forEach(function(row,i){
@@ -10343,7 +10339,7 @@ var duration=function(starttime,endtime){
 }
 
 
-var xen_utils_transformwork= function transform(databybatch,container,chart){
+var _1BPmMW= function transform(databybatch,container,chart){
 	var formatedData={}
 	var lnk="http://sxbatch.silex.se/ProjectPlanning/batch/batchPage.aspx?batchId=";
 
@@ -10375,8 +10371,8 @@ var xen_utils_transformwork= function transform(databybatch,container,chart){
 		formatedData[d0]={'action':{},'meta':[]}
 		formatedData[d0]['meta']=databybatch[d0]['meta'];
 		formatedData[d0]['meta']['title']=	"ID: "+databybatch[d0]['meta'].name+"\n"+"Product: "+databybatch[d0]['meta'].product+"\n";	
-		//formatedData[d0]['meta']['fill']="rgba(255,100,100,0.6)";
-		//formatedData[d0]['meta']['fontcolor']='';
+		formatedData[d0]['meta']['fill']="rgba(255,255,255,0.6)";
+		//formatedData[d0]['meta']['fontcolor']='white';
 		//formatedData[d0]['meta']['fontstyle']='normal';
 		//formatedData[d0]['meta']['stroke']='lightGreen';
 		//formatedData[d0]['meta']['strokewidth']=2;
@@ -10422,10 +10418,10 @@ var xen_utils_transformwork= function transform(databybatch,container,chart){
 }
 
 //<@workload/lib/d3/v3.5.17/d3@>
-d3.timeline = xen_d3_timeline;
+d3.timeline = _ZjbOlg;
 // var databybatch = < @./data@>;
-var extract = xen_utils_extract;
-var transform = xen_utils_transformwork;
+var extract = _Z1uzd1v;
+var transform = _1BPmMW;
 
 var prodactive='#aa00aa';
 var devactive='#00aaaa';
@@ -10463,7 +10459,7 @@ var color={
 
 
 	function update(container,data,chart){
-		//console.log(data);
+		console.log(data);
 		container.datum(data).call(chart);
 	}
 
@@ -10475,14 +10471,12 @@ var resultdata;
 
 	var rawdata=d3.selectAll("table#ctl00_sxBatchContent_rgridWorkload_ctl00 tr")
 			.selectAll('td')
-			
-	//var localarea=d3.select('#ctl00_sxBatchContent_rcbFabarea')
-	//console.log('LOCAL',localarea.node().value);
 
-var sel = document.getElementById('ctl00_sxBatchContent_rcbFabarea');
-//console.log(sel.options[sel.selectedIndex].innerHTML)
-	localarea=sel.options[sel.selectedIndex].innerHTML; //global
-//console.log(rawdata)
+	var sel = document.getElementById('ctl00_sxBatchContent_rcbFabarea');
+	//console.log(sel.options[sel.selectedIndex].innerHTML)
+	localarea=sel.options[sel.selectedIndex].innerHTML; //global			
+			
+	//console.log(rawdata)
 	var data=extract(rawdata)
 	//console.log('data',data);
 	resultdata=[transform(data,container,chart)]
@@ -10491,6 +10485,6 @@ var sel = document.getElementById('ctl00_sxBatchContent_rcbFabarea');
 
 
 //d3.select('body').append('div').append('pre').text(JSON.stringify(resultdata,null,2))
-var work= undefined;
+var _g6ng= undefined;
 
 
